@@ -1,4 +1,5 @@
 import numpy as np
+import mlflow
 
 from ISR.utils.image_processing import (
     process_array,
@@ -8,7 +9,7 @@ from ISR.utils.image_processing import (
 )
 
 
-class ImageModel:
+class ImageModel(mlflow.pyfunc.PythonModel):
     """ISR models parent class.
 
     Contains functions that are common across the super-scaling models.
